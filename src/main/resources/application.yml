@@ -1,0 +1,20 @@
+server:
+  port: 8080
+
+mybatis:
+  mapper-locations: classpath:mapper/*.xml
+  type-aliases-package: com.project.hrms.entity
+  configuration:
+    #配置项：开启下划线到驼峰的自动转换. 作用：将数据库字段根据驼峰规则自动注入到对象属性。
+    map-underscore-to-camel-case: true
+
+spring:
+  datasource:
+    driverClassName: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/fan_blog?useUnicode=true&characterEncoding=utf8&serverTimezone=Asia/Shanghai&useSSL=false
+    username: root
+    password: youpassword
+    mvc:
+      view:
+        prefix: /WEB-INF/jsp/
+        suffix: .jsp
