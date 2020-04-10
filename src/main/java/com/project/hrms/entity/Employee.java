@@ -1,4 +1,4 @@
-package com.blog.fan.entity;
+package com.project.hrms.entity;
 
 import java.io.Serializable;
 import java.util.Date;
