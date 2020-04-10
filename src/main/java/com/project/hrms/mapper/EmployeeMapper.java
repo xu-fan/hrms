@@ -10,13 +10,13 @@ import java.util.List;
 @Mapper
 @Repository
 public interface EmployeeMapper {
-    Post postByid(Integer postId);
+    Employee employeeByid(Integer eId);
 
-    boolean save(Post post);
+    boolean save(Employee employee);
 
-    boolean update(Post post);
+    boolean update(Employee employee);
 
-    boolean delete(Integer postId);
+    boolean delete(Integer eId);
 
-    List<Employee> posts();
+    List<Employee> employees();
 }

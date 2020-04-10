@@ -17,22 +17,22 @@ public class EmployeeController {
     EmployeeMapper employeeMapper;
 
     @GetMapping
-    public List<Employee> posts(){
+    public List<Employee> employees(){
 
-        List<Employee> posts=employeeMapper.posts();
-        return posts;
+        List<Employee> employees=employeeMapper.employees();
+        return employees;
 
     }
 
-    @GetMapping("/${postId}")
-    public Post posts(@PathVariable("postId")Integer postId){
-        Post post = employeeMapper.postByid(postId);
-        return post;
+    @GetMapping("/${eId}")
+    public Employee posts(@PathVariable("eId")Integer eId){
+        Employee employee = employeeMapper.employeeByid(eId);
+        return employee;
     }
 
     @PostMapping
-    public String save(@RequestBody Post post){
-        if(employeeMapper.save(post)){
+    public String save(@RequestBody Employee employee){
+        if(employeeMapper.save(employee)){
             return "新增成功";
         }else {
             return "新增失败";
@@ -40,8 +40,8 @@ public class EmployeeController {
     }
 
     @PutMapping
-    public String update(@RequestBody Post post){
-        if(employeeMapper.update(post)){
+    public String update(@RequestBody Employee employee){
+        if(employeeMapper.update(employee)){
             return "更新成功";
         }else {
             return "更新失败";
@@ -49,8 +49,8 @@ public class EmployeeController {
     }
 
     @DeleteMapping
-    public String delete(@RequestParam("postId")Integer postId){
-        if(employeeMapper.delete(postId)){
+    public String delete(@RequestParam("eId")Integer eId){
+        if(employeeMapper.delete(eId)){
             return "删除成功";
         }else {
             return "删除失败";
