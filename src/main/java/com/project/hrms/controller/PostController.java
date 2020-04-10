@@ -21,7 +21,7 @@ public class PostController {
 
     @Resource
     PostService postService;
-
+    
     @GetMapping
     public List<Post> posts(){
         List<Post> posts = new ArrayList<>();
