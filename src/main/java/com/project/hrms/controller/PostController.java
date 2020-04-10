@@ -29,11 +29,11 @@ public class PostController {
         return posts;
     }
 
-    @GetMapping("/${postId}")
-    public Post posts(@PathVariable("postId")Integer postId){
-        Post post = postService.postByid(postId);
-        return post;
-    }
+//    @GetMapping("/#{postId}")
+//    public Post posts(@PathVariable("postId")Integer postId){
+//        Post post = postService.postByid(postId);
+//        return post;
+//    }
 
     @PostMapping
     public String save(@RequestBody Post post){

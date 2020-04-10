@@ -20,7 +20,7 @@ SET FOREIGN_KEY_CHECKS=0;
 -- ----------------------------
 DROP TABLE IF EXISTS `department`;
 CREATE TABLE `department` (
-  `d_id` int(11) NOT NULL COMMENT '部门编号',
+  `d_id` int(11) NOT NULL AUTO_INCREMENT COMMENT '部门编号',
   `d_name` varchar(255) NOT NULL COMMENT '部门名称',
   `d_supid` int(11) DEFAULT '0' COMMENT '上级部门id',
   `d_add_date` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP COMMENT '新增日期',
@@ -37,7 +37,7 @@ CREATE TABLE `department` (
 -- ----------------------------
 DROP TABLE IF EXISTS `employee`;
 CREATE TABLE `employee` (
-  `e_id` int(11) NOT NULL COMMENT '员工编号',
+  `e_id` int(11) AUTO_INCREMENT COMMENT '员工编号',
   `e_name
 e_name` varchar(30) NOT NULL COMMENT '员工姓名',
   `e_sex` varchar(10) NOT NULL COMMENT '性别',
@@ -61,7 +61,7 @@ e_name` varchar(30) NOT NULL COMMENT '员工姓名',
 -- ----------------------------
 DROP TABLE IF EXISTS `post`;
 CREATE TABLE `post` (
-  `p_id` int(11) NOT NULL COMMENT '岗位编号',
+  `p_id` int(11) AUTO_INCREMENT COMMENT '岗位编号',
   `p_name` varchar(255) NOT NULL COMMENT '岗位名称',
   `d_id` int(11) NOT NULL COMMENT '岗位所在部门',
   `p_supid` int(11) DEFAULT '0' COMMENT '上级岗位编号',

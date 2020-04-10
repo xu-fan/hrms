@@ -1,5 +1,5 @@
 server:
-  port: 8080
+  port: 8081
 
 mybatis:
   mapper-locations: classpath:mapper/*.xml
@@ -11,7 +11,7 @@ mybatis:
 spring:
   datasource:
     driverClassName: com.mysql.cj.jdbc.Driver
-    url: jdbc:mysql://localhost:3306/fan_blog?useUnicode=true&characterEncoding=utf8&serverTimezone=Asia/Shanghai&useSSL=false
+    url: jdbc:mysql://localhost:3306/hrms?useUnicode=true&characterEncoding=utf8&serverTimezone=Asia/Shanghai&useSSL=false
     username: root
     password: youpassword
     mvc:
