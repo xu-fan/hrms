@@ -19,7 +19,7 @@ public class EmployeeController {
     @GetMapping
     public List<Employee> posts(){
 
-        List<Employee> employees=employeeMapper.posts();
+        List<Employee> posts=employeeMapper.posts();
         return posts;
 
     }
